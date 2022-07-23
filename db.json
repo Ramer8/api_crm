@@ -1,0 +1,20 @@
+{
+  "customers": [
+    {
+      "name": "Benice P",
+      "company": "Benicius & co.",
+      "email": "benicius@co.uk",
+      "phone": "",
+      "notes": "",
+      "id": 3
+    },
+    {
+      "name": "Robinson",
+      "company": "Robinson Tools",
+      "email": "Rob@tools.br",
+      "phone": "",
+      "notes": "",
+      "id": 4
+    }
+  ]
+}
