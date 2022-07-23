@@ -1,5 +1,4 @@
 import React from 'react'
-
 const Alert = ({ children }) => {
     return (
         <div className='text-center my-4 bg-red-600 uppercase  text-white font-bold p-3 '>
@@ -7,5 +6,4 @@ const Alert = ({ children }) => {
         </div>
     )
 }
-
 export default Alert

@@ -15,9 +15,9 @@ const Customer = ({ customer, handleDelete }) => {
             <td className='p-3'>
                 <button
                     type='button'
-                    className='bg-yellow-500 hover:bg-yellow-600 block w-full text-white p-2 uppercase  font-bold text-xs mt-3'
+                    className='bg-green-700 hover:bg-green-800 block w-full text-white p-2 uppercase  font-bold text-xs mt-3'
                     onClick={() => navigate(`/customers/${id}`)}
-                >Watch</button>
+                >View</button>
                 <button
                     type='button'
                     className='bg-blue-600 hover:bg-blue-700 block w-full text-white p-2 uppercase  font-bold text-xs mt-3'

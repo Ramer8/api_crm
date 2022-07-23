@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import Spinner from "./Spinner.jsx";
 
-const WatchCustomer = () => {
+const ViewCustomer = () => {
 
     const [customer, setCustomer] = useState({})
     const [loading, setLoading] = useState(true)
@@ -12,7 +12,7 @@ const WatchCustomer = () => {
     useEffect(() => {
         const getCustomerAPI = async () => {
             try {
-                const url = `http://localhost:4000/customers/${id}`
+                const url = `${import.meta.env.VITE_API_URL}/${id}`
                 const response = await fetch(url)
                 const result = await response.json()
                 setCustomer(result);
@@ -28,11 +28,11 @@ const WatchCustomer = () => {
     return (
         loading ? <Spinner /> :
             Object.keys(customer).length === 0 ?
-                <p> No results</p> :
+                <p className="text-gray-800 uppercase text-xl font-bold">No results</p> :
                 (
                     <div>
-                        <h1 className="font-black text-4xl text-blue-900">Watching Customer: {customer.name}</h1>
-                        <p className="mt-2">Customer Information
+                        <h1 className="font-black text-4xl text-blue-900">Loaded Customer</h1>
+                        <p className="mt-2 text-xl font-bold ">Customer Info
                         </p>
                         <p className="text-3xl mt-10 text-gray-600">
                             <span className="text-gray-800 uppercase font-bold">
@@ -61,4 +61,4 @@ const WatchCustomer = () => {
                 )
     )
 }
-export default WatchCustomer
+export default ViewCustomer
